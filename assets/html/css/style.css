@@ -1,0 +1,389 @@
+/* ==============================================
+
+Template: Washer
+Version: 1.0
+Author:	Ukieweb
+
+ - General setting
+ - Washer
+ - Watch
+ - Footer
+ - Animationload
+
+================================================ */
+
+
+/* ------------------
+    General setting
+--------------------*/
+*{
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 300;
+}
+html{
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: #111;
+    font-weight: 600;
+}
+body {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 auto;
+    position: relative;
+    background-color: #F0F0F0;
+}
+h1 {
+    font-size: 93px;
+    line-height: 96px;
+    margin-top: 48px;
+    margin-bottom: 24px;
+    font-weight: 900;
+}
+h2 {
+    font-size: 52px;
+    line-height: 72px;
+    margin-top: 0px;
+    margin-bottom: 24px;
+    font-weight: 900;
+}
+h3 {
+    font-size: 29px;
+    line-height: 48px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+h4 {
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+p, ul, ol, pre, table, blockquote {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+hr {
+    border: 1px solid;
+    margin: -1px 0;
+}
+ul ul, ol ol, ul ol, ol ul {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+b, strong, em, small, code {
+    line-height: 1;
+}
+sup, sub {
+    vertical-align: baseline;
+    position: relative;
+    top: -0.4em;
+}
+sub {
+    top: 0.4em;
+}
+
+p{
+    font-weight: 300;
+    color: #373b3e;
+}
+.uppercase{
+    text-transform: uppercase;
+}
+.error{
+    border-color: red !important;
+}
+.title {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    color: #111;
+    line-height: 28px;
+    margin: 25px 10px 55px 10px;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #373b3e;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #373b3e;
+    opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #373b3e;
+    opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #373b3e;
+}
+
+
+/* ------------------
+    Washer
+--------------------*/
+.place_for_washer{
+    width: 180px;
+    height: 195px;
+    position: relative;
+    margin: 90px auto 0px;
+}
+
+.place_for_washer .washer{
+    width: 180px;
+    height: 195px;
+    position: relative;
+    background-image: url("../img/washer.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-color: transparent;
+    background-size: 100%;
+    z-index: 2;
+    -moz-animation: 0.3s ease 0s normal none infinite washer;
+    -moz-transform-origin: 50% 100%;
+    -webkit-animation:washer 0.3s infinite ease-in-out;
+    -webkit-transform-origin: 50% 100%;
+    -o-animation: 0.3s ease 0s normal none infinite washer;
+    -o-animation:washer 0.3s infinite ease-in-out;
+    -o-transform-origin: 50% 100%;
+    -ms-animation: 0.3s ease 0s normal none infinite washer;
+    -ms-animation:washer 0.3s infinite ease-in-out;
+    -ms-transform-origin: 50% 100%;
+    animation: 0.3s ease 0s normal none infinite washer;
+    animation:washer 0.3s infinite ease-in-out;
+    transform-origin: 50% 100%;
+}
+
+@-moz-keyframes washer {
+    0%{-moz-transform:rotate(3deg)}
+    50%{-moz-transform:rotate(1deg)}
+    100%{-moz-transform:rotate(3deg)}
+}
+@-webkit-keyframes washer {
+    0%{-webkit-transform:rotate(2deg)}
+    50%{-webkit-transform:rotate(1deg)}
+    100%{-webkit-transform:rotate(2deg)}
+}
+@-o-keyframes washer {
+    0%{-o-transform:rotate(3deg)}
+    50%{-o-transform:rotate(1deg)}
+    100%{-o-transform:rotate(3deg)}
+}
+@-ms-keyframes washer {
+    0%{-ms-transform:rotate(3deg)}
+    50%{-ms-transform:rotate(1deg)}
+    100%{-ms-transform:rotate(3deg)}
+}
+@keyframes washer {
+    0%{transform:rotate(3deg)}
+    50%{transform:rotate(1deg)}
+    100%{transform:rotate(3deg)}
+}
+
+
+.place_for_washer .shadow{
+    width: 180px;
+    height: 32px;
+    position: relative;
+    background-image: url("../img/shadow.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-color: transparent;
+    background-size: 100%;
+    top: -33px;
+    left: -25px;
+    z-index: 1;
+}
+
+.place_for_washer .clothing{
+    width: 94px;
+    height: 99px;
+    background-image: url("../img/clothing.svg");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-color: transparent;
+    background-size: 100%;
+    position: absolute;
+    left: 53px;
+    top: 47px;
+    z-index: 1;
+    -moz-animation: 1s ease 0s linear none infinite clothing;
+    -moz-transform-origin: 50% 50%;
+    -webkit-animation:clothing 1s infinite linear;
+    -webkit-transform-origin: 50% 50%;
+    -o-animation: 1s ease 0s linear none infinite clothing;
+    -o-animation:clothing 1s infinite linear;
+    -o-transform-origin: 50% 50%;
+    -ms-animation: 1s ease 0s linear none infinite clothing;
+    -ms-animation:clothing 1s infinite linear;
+    -ms-transform-origin: 50% 50%;
+    animation: 1s ease 0s linear none infinite clothing;
+    animation:clothing 1s infinite linear;
+    transform-origin: 50% 50%;
+}
+@-moz-keyframes clothing {
+    0%{-moz-transform:rotate(0deg)}
+    50%{-moz-transform:rotate(180deg)}
+    100%{-moz-transform:rotate(360deg)}
+}
+@-webkit-keyframes clothing {
+    0%{-webkit-transform:rotate(0deg)}
+    50%{-webkit-transform:rotate(180deg)}
+    100%{-webkit-transform:rotate(360deg)}
+}
+@-o-keyframes clothing {
+    0%{-o-transform:rotate(0deg)}
+    50%{-o-transform:rotate(180deg)}
+    100%{-o-transform:rotate(360deg)}
+}
+@-ms-keyframes clothing {
+    0%{-ms-transform:rotate(0deg)}
+    50%{-ms-transform:rotate(180deg)}
+    100%{-ms-transform:rotate(360deg)}
+}
+@keyframes clothing {
+    0%{transform:rotate(0deg)}
+    50%{transform:rotate(180deg)}
+    100%{transform:rotate(360deg)}
+}
+
+/* ------------------
+    Watch
+--------------------*/
+#watch{
+    color: #f6f7f9;
+    text-align: center;
+}
+
+#watch .dash {
+    display: inline-block;
+    padding: 20px 30px;
+    line-height: 72px;
+    text-align: center;
+    margin: 0 -3px;
+}
+
+#watch .dash:first-child{
+    border-radius: 8px 0px 0px 8px;
+    background-color: #0d1e81;
+}
+#watch .dash:last-child{
+    border-radius: 0px 8px 8px 0px;
+    background-color: #3350b9;
+    padding-left: 28px;
+    padding-right: 28px;
+}
+
+#watch .dash:nth-child(2){
+    background-color: #1b3297;
+}
+#watch .dash:nth-child(3){
+    background-color: #2d47af;
+}
+
+#watch .dash .digit {
+    display: block;
+    width: 24px;
+    font-size: 44px;
+    line-height: 44px;
+    height: 38px;
+    float: left;
+}
+
+#watch .dash .digit .top, #watch .dash .digit .bottom{
+    font-weight: 300;
+}
+
+#watch .dash span.dash_title {
+    font-size: 14px;
+    line-height: 16px;
+    padding-top: 6px;
+    font-weight: 300;
+    display: block;
+    text-align: center;
+    clear: both;
+}
+
+
+/* ------------------
+    Footer
+--------------------*/
+#footer{
+    z-index: 9999;
+    position: relative;
+}
+.contact_socials{
+    padding: 0;
+    margin: 0;
+}
+.contact_socials li{
+    display: inline-block;
+}
+.copyright {
+    font-size: 12px;
+    color: #ffffff;
+    margin: 20px 0;
+}
+.footer_socials {
+    margin: 25px 0 10px;
+}
+.ukie_social{
+    font-size: 16px;
+    color: #ffffff;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    display: block;
+    margin: 5px;
+    border-radius: 50%;
+    background-color: #0d1e81;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+.ukie_social:hover, .ukie_social:active, .ukie_social:focus{
+    color: #ffffff;
+    background-color: #3350b9;
+}
+
+
+/* ------------------
+    Animationload
+--------------------*/
+.animationload {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ffffff;
+    z-index: 999999;
+}
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -100px;
+    width: 200px;
+    height: 200px;
+    background-image: url("../img/ajax-loader.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* ------------------
+    Custom
+--------------------*/
+
+.centered {
+    text-align: center;
+}
+
+.center-block {
+    max-width: 500px;
+}
