@@ -5,7 +5,7 @@ RUN apt-get update
 RUN apt-get install -y nginx supervisor
 
 # nginx.conf
-ADD assets/conf/nginx.conf /usr/local/nginx/conf/
+ADD assets/conf/nginx-fyi-stanging.conf /usr/local/nginx/conf/nginx.conf
 
 # supervisor.conf
 ADD assets/conf/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
